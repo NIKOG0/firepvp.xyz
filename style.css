@@ -1,0 +1,115 @@
+/* style.css - FIRE PVP */
+
+/* === Variáveis === */
+:root{
+  --bg-1: #030316;
+  --bg-2: #071025;
+  --glass: rgba(255,255,255,0.06);
+  --card-bg: rgba(10,12,20,0.55);
+  --accent: #1e40af;
+  --accent-2:#3b82f6;
+  --muted:#bfc7d6;
+  --white:#ffffff;
+  --btn-border: rgba(255,255,255,0.10);
+  --btn-radius: 10px;
+  --transition: 280ms cubic-bezier(.2,.9,.3,1);
+  box-sizing: border-box;
+}
+
+/* === Base === */
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;padding:0;font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;background:linear-gradient(180deg,var(--bg-1) 0%,var(--bg-2) 100%);color:var(--white);}
+a{color:inherit;text-decoration:none}
+
+/* === STAR LAYERS === */
+#stars,#stars2,#stars3{position:fixed;left:0;top:0;width:100%;height:200vh;z-index:1;pointer-events:none}
+#stars{opacity:0.95;filter:blur(.2px)}
+#stars2{opacity:0.6;filter:blur(1px)}
+#stars3{opacity:0.35;filter:blur(2px)}
+
+/* === WRAPPER === */
+.wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px;position:relative;z-index:5}
+
+/* === CARD === */
+.card{
+  width:100%;
+  max-width:560px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.25));
+  border-radius:18px;
+  padding:28px;
+  backdrop-filter: blur(12px) saturate(120%);
+  box-shadow: 0 12px 40px rgba(2,6,23,0.8);
+  border: 1px solid rgba(255,255,255,0.04);
+  animation: pop .5s ease;
+}
+@keyframes pop{
+  from{opacity:0;transform:translateY(15px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* === LOGO === */
+.logo{
+  width:96px;height:96px;border-radius:50%;border:4px solid var(--accent);
+  box-shadow:0 0 30px rgba(30,64,175,0.2);
+  object-fit:cover;
+  margin:0 auto 16px;
+}
+
+/* === TÍTULO === */
+h1{text-align:center;margin:0;font-size:2rem}
+.glow{
+  animation: neon 2s ease-in-out infinite alternate;
+}
+@keyframes neon{
+  from{text-shadow:0 0 6px #fff,0 0 18px var(--accent)}
+  to{text-shadow:0 0 14px #fff,0 0 34px var(--accent-2)}
+}
+
+/* === DESCRIÇÃO === */
+.desc{text-align:center;color:var(--muted);margin-bottom:20px}
+
+/* === BOTÕES === */
+.links{
+  display:grid;
+  gap:12px;
+}
+
+.btn{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  width:100%;
+  padding:12px 14px;
+  background:rgba(255,255,255,0.04);
+  border:2px solid var(--btn-border);
+  border-radius:var(--btn-radius);
+  transition:var(--transition);
+  font-weight:700;
+}
+
+.btn i{
+  width:40px;height:40px;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:10px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.05);
+  font-size:22px;
+}
+
+.btn:hover{
+  transform:translateY(-4px);
+  border-color:var(--accent);
+  box-shadow:0 12px 32px rgba(30,64,175,0.15);
+}
+
+/* === TIPOS === */
+.discord i{color:#5865F2}
+.store i{color:#f5c542}
+.youtube i{color:#ff3b30}
+.instagram i{color:#ff00b3}
+
+/* === FOOTER === */
+footer{text-align:center;color:#aaa;margin-top:18px;font-size:0.9rem}
+
+/* REMOVE IFRAME INVISÍVEL */
+iframe[width="0"][height="0"]{display:none !important}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIRE PVP</title>
+
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fundo Animado -->
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+
+  <!-- Música -->
+  <audio id="music" autoplay loop>
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
+  <script>
+    document.addEventListener("click", () => {
+      document.getElementById("music").play();
+    }, { once:true });
+  </script>
+
+  <div class="wrap">
+    <div class="card">
+
+      <img src="https://cdn.discordapp.com/attachments/1360883035758792948/1439765312969904320/firepvp.jpg?ex=691bb570&is=691a63f0&hm=137951b1d2e6b045c2bb1dbc7901f48fb2c1f3696de3d82bf954de5bbbc679e8" class="logo">
+
+      <h1 class="glow">FIRE PVP <div id="BETA"></div></h1>
+
+      <p class="desc">
+        Melhor servidor de PVP da América Latina!<br>
+      </p>
+
+      <div class="links">
+
+        <!-- DISCORD -->
+        <a href="https://discord.gg/Mc9vfsESau" class="btn discord">
+          <i class="bx bxl-discord-alt"></i>
+          <span>Discord Oficial</span>
+        </a>
+
+        <!-- LOJA (agora com saco de dinheiro 💰) -->
+        <a href="#" class="btn store">
+          <i class="bx bxs-shopping-bags"></i>
+          <span>Loja Oficial</span>
+        </a>
+
+        <!-- YOUTUBE -->
+        <a href="#" class="btn youtube">
+          <i class="bx bxl-youtube"></i>
+          <span>Canal do YouTube</span>
+        </a>
+
+        <!-- INSTAGRAM -->
+        <a href="#" class="btn instagram">
+          <i class="bx bxl-instagram-alt"></i>
+          <span>Instagram</span>
+        </a>
+
+      </div>
+
+      <footer>❤️ Feito por NIKO G0D</footer>
+
+    </div>
+  </div>
+
+</body>
+</html>
